@@ -45,132 +45,98 @@ Numpy: 1.11.1 + mkl
 </code></pre>
 <p>Note: Scipy and Numpy can be installed on a Windows machines using binaries provided over <a href="http://www.lfd.uci.edu/%7Egohlke/pythonlibs">here</a>.</p>
 
-<h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+<h2><a id="Example_1_0"></a>Example 1</h2>
+<pre><code class="language-sh">$ python example.py
+</code></pre>
+<h4><a id="OR_6"></a>OR</h4>
+<pre><code class="language-python"><span class="hljs-keyword">from</span> pycnn <span class="hljs-keyword">import</span> pycnn
 
-<p><em>Image Processing</em> using CNN is simple using this library, just clone the repository and use the following code.</p>
-
-<div class="highlight highlight-python"><pre><span class="pl-k">from</span> pycnn <span class="pl-k">import</span> pycnn
-
-cnn <span class="pl-k">=</span> pycnn()
-
-cnn.edgedetection(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output1.png<span class="pl-pds">'</span></span>)
-cnn.grayscaleedgedetection(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output2.png<span class="pl-pds">'</span></span>)
-cnn.cornerdetection(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output3.png<span class="pl-pds">'</span></span>)
-cnn.diagonallinedetection(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output4.png<span class="pl-pds">'</span></span>)
-cnn.inversion(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output5.png<span class="pl-pds">'</span></span>)
-cnn.generaltemplates(<span class="pl-s"><span class="pl-pds">'</span>input.bmp<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>output6.png<span class="pl-pds">'</span></span>)</pre></div>
-
-<h4>
-<a id="or" class="anchor" href="#or" aria-hidden="true"><span class="octicon octicon-link"></span></a>OR</h4>
-
-<p>Use example.py available with the repository.</p>
-
-<div class="highlight highlight-sh"><pre>$ python example.py</pre></div>
-
-<h2>
-<a id="example-results" class="anchor" href="#example-results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example results</h2>
-
-<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/input.bmp" alt="">
-<em>Input: input.bmp</em></p>
-
+cnn = pycnn()
+</code></pre>
+<p><strong>Input:</strong></p>
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/input.bmp" alt=""></p>
 <p><strong>Edge Detection:</strong></p>
-
-<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output1.png" alt="">
-<em>Output: output1.png</em></p>
-
+<pre><code class="language-python">cnn.edgedetection(<span class="hljs-string">'images/input.bmp'</span>, <span class="hljs-string">'images/output1.png'</span>)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output1.png" alt=""></p>
+<p><strong>Grayscale Edge Detection</strong></p>
+<pre><code class="language-python">cnn.grayscaleedgedetection(<span class="hljs-string">'images/input.bmp'</span>, <span class="hljs-string">'images/output2.png'</span>)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output2.png" alt=""></p>
 <p><strong>Corner Detection:</strong></p>
-
-<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output3.png" alt="">
-<em>Output: output3.png</em></p>
-
+<pre><code class="language-python">cnn.cornerdetection(<span class="hljs-string">'images/input.bmp'</span>, <span class="hljs-string">'images/output3.png'</span>)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output3.png" alt=""></p>
 <p><strong>Diagonal line Detection:</strong></p>
-
-<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output4.png" alt="">
-<em>Output: output4.png</em></p>
-
+<pre><code class="language-python">cnn.diagonallinedetection(<span class="hljs-string">'images/input.bmp'</span>, <span class="hljs-string">'images/output4.png'</span>)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output4.png" alt=""></p>
 <p><strong>Inversion (Logic NOT):</strong></p>
+<pre><code class="language-python">cnn.inversion(<span class="hljs-string">'images/input.bmp'</span>, <span class="hljs-string">'images/output5.png'</span>)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output5.png" alt=""></p>
+<h2><a id="Example_2_58"></a>Example 2</h2>
+<pre><code class="language-sh">$ python example_lenna.py
+</code></pre>
+<h4><a id="OR_64"></a>OR</h4>
+<pre><code class="language-python"><span class="hljs-keyword">from</span> pycnn <span class="hljs-keyword">import</span> pycnn
 
-<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/output5.png" alt="">
-<em>Output: output5.png</em></p>
-
-<h2>
-<a id="another-example-lenna" class="anchor" href="#another-example-lenna" aria-hidden="true"><span class="octicon octicon-link"></span></a>Another example (Lenna)</h2>
-
-<p>Here, the input is the popular face in image processing field, Lenna.</p>
-
-<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/lenna.gif" alt="">
-<em>Input: lenna.gif</em></p>
-
+cnn = pycnn()
+</code></pre>
+<p><strong>Input:</strong></p>
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/lenna.gif" alt=""></p>
 <p><strong>Edge Detection:</strong></p>
-
-<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/lenna_edge.png" alt="">
-<em>Output: lenna_edge.png</em></p>
-
+<pre><code class="language-python">cnn.edgedetection(<span class="hljs-string">'images/lenna.gif'</span>, <span class="hljs-string">'images/lenna_edge.png'</span>)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/lenna_edge.png" alt=""></p>
 <p><strong>Diagonal line Detection:</strong></p>
-
-<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/lenna_diagonal.png" alt="">
-<em>Output: lenna_diagonal.png</em></p>
-
-<h2>
-<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h2>
-
-<div class="highlight highlight-python"><pre><span class="pl-k">from</span> pycnn <span class="pl-k">import</span> pycnn</pre></div>
-
-<p>Import the module in your main file.</p>
-
-<div class="highlight highlight-python"><pre>cnn <span class="pl-k">=</span> pycnn()</pre></div>
-
-<p>Initialize the cnn class</p>
-
-<h4>
-<a id="cnnedgedetectioninputimagelocation-outputimagelocation" class="anchor" href="#cnnedgedetectioninputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.edgedetection(inputimagelocation, outputimagelocation)</h4>
-
-<p>Function for edge detection using CNN on a given image.</p>
-
-<h4>
-<a id="cnngrayscaleedgedetectioninputimagelocation-outputimagelocation" class="anchor" href="#cnngrayscaleedgedetectioninputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.grayscaleedgedetection(inputimagelocation, outputimagelocation)</h4>
-
-<p>Function for grayscale edge detection using CNN on a given image.</p>
-
-<h4>
-<a id="cnncornerdetectioninputimagelocation-outputimagelocation" class="anchor" href="#cnncornerdetectioninputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.cornerdetection(inputimagelocation, outputimagelocation)</h4>
-
-<p>Function for corner detection using CNN on a given image.</p>
-
-<h4>
-<a id="cnndiagonallinedetectioninputimagelocation-outputimagelocation" class="anchor" href="#cnndiagonallinedetectioninputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.diagonallinedetection(inputimagelocation, outputimagelocation)</h4>
-
-<p>Function for diagonal line detection using CNN on a given image.</p>
-
-<h4>
-<a id="cnninversioninputimagelocation-outputimagelocation" class="anchor" href="#cnninversioninputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.inversion(inputimagelocation, outputimagelocation)</h4>
-
-<p>Function for invert an image using CNN.</p>
-
-<h4>
-<a id="cnngeneraltemplatesinputimagelocation-outputimagelocation" class="anchor" href="#cnngeneraltemplatesinputimagelocation-outputimagelocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>cnn.generaltemplates(inputimagelocation, outputimagelocation)</h4>
-
-<p>Function for applying general CNN templates on a given image.</p>
-
-<h4>
-<a id="inputimagelocation-is-the-location-of-the-input-image-type-string" class="anchor" href="#inputimagelocation-is-the-location-of-the-input-image-type-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>inputimagelocation is the location of the input image, Type: String.</h4>
-
-<h4>
-<a id="outputimagelocation-is-the-location-of-the-output-image-type-string" class="anchor" href="#outputimagelocation-is-the-location-of-the-output-image-type-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>outputimagelocation is the location of the output image, Type: String.</h4>
-
-<h2>
-<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h2>
-
-<h4>
-<a id="author-ankit-aggarwal" class="anchor" href="#author-ankit-aggarwal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author: Ankit Aggarwal</h4>
-
-<p>If anybody is interested in working on developing this library, fork and feel free to get in touch with me.</p>
-
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
-
+<pre><code class="language-python">cnn.diagonallinedetection(<span class="hljs-string">'images/lenna.gif'</span>, <span class="hljs-string">'images/lenna_diagonal.png'</span>)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/ankitaggarwal011/PyCNN/master/images/lenna_diagonal.png" alt=""></p>
+<h2><a id="Usage_92"></a>Usage</h2>
+<p>Import module</p>
+<pre><code class="language-python"><span class="hljs-keyword">from</span> pycnn <span class="hljs-keyword">import</span> pycnn
+</code></pre>
+<p>Initialize object</p>
+<pre><code class="language-python">cnn = pycnn()
+</code></pre>
+<pre><code class="language-python"><span class="hljs-comment"># inputimagelocation: location of the input image; type: String.</span>
+<span class="hljs-comment"># outputimagelocation: location of the output image; type: String.</span>
+<span class="hljs-comment"># tempA_A: control template; type: 3 x 3 list.</span>
+<span class="hljs-comment"># tempB_B: feedback template; type: 3 x 3 list.</span>
+<span class="hljs-comment"># initialcondition: initial condition, type: float.</span>
+<span class="hljs-comment"># Ib_b: bias, type: float.</span>
+</code></pre>
+<p>General image processing</p>
+<pre><code class="language-python">cnn.generaltemplates(inputimagelocation, outputimagelocation, tempA_A, tempB_B, initialcondition, Ib_b)
+</code></pre>
+<p>Edge detection</p>
+<pre><code class="language-python">cnn.edgedetection(inputimagelocation, outputimagelocation)
+</code></pre>
+<p>Grayscale edge detection</p>
+<pre><code class="language-python">cnn.grayscaleedgedetection(inputimagelocation, outputimagelocation)
+</code></pre>
+<p>Corner detection</p>
+<pre><code class="language-python">cnn.cornerdetection(inputimagelocation, outputimagelocation)
+</code></pre>
+<p>Diagonal line detection</p>
+<pre><code class="language-python">cnn.diagonallinedetection(inputimagelocation, outputimagelocation)
+</code></pre>
+<p>Inversion (Login NOT)</p>
+<pre><code class="language-python">cnn.inversion(inputimagelocation, outputimagelocation)
+</code></pre>
+<h2><a id="License_151"></a>License</h2>
 <p><a href="https://github.com/ankitaggarwal011/CNN-Image-Processing/blob/master/LICENSE">MIT License</a></p>
+<h2><a id="Contribute_155"></a>Contribute</h2>
+<p>Want to work on the project? Any kind of contribution is welcome!</p>
+<p>Follow these steps:</p>
+<ul>
+<li>Fork the project.</li>
+<li>Create a new branch.</li>
+<li>Make your changes and write tests when practical.</li>
+<li>Commit your changes to the new branch.</li>
+<li>Send a pull request.</li>
+</ul>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/ankitaggarwal011/PyCNN">PyCNN</a> is maintained by <a href="https://github.com/ankitaggarwal011">ankitaggarwal011</a>.</span>
